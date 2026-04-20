@@ -75,6 +75,7 @@ local template = {
 				"--gff3-fomrat" : false,
 				"--threads" : $.meta_info.threads,
 				"--overwrite" : false,
+				"--work-dir" : $.meta_info.output + "/simpleaf_index/workdir",
 				"--kmer-length" :  31,
 				"--minimizer-length" : utils.ml(std.get(self, "--kmer-length")), # a quick way to calculate minimizer length
 				"--decoy-paths" : null, # only if using piscem >= 0.7

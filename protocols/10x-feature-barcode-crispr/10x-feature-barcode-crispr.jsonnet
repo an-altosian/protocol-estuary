@@ -117,6 +117,7 @@ local template = {
 				    "--gff3-fomrat" : false,
                     "--threads" : $.meta_info.threads,
                     "--overwrite" : false,
+                    "--work-dir" : $.meta_info.output + "/gene_expression/simpleaf_index/workdir",
                     "--kmer-length" :  31,
                     "--minimizer-length" : utils.ml(std.get(self, "--kmer-length")), # a quick way to calculate minimizer length
                     "--decoy-paths" : null, # only if using piscem >= 0.7
@@ -219,6 +220,7 @@ local template = {
                     "--keep-duplicates" : false,
                     "--threads" : $.meta_info.threads,
                     "--overwrite" : false,
+                    "--work-dir" : $.meta_info.output + "/crispr_screen/simpleaf_index/workdir",
                     "--kmer-length" :  7,
                     "--minimizer-length" : utils.ml(std.get(self, "--kmer-length")), # a quick way to calculate minimizer length
                     "--decoy-paths" : null, # only if using piscem >= 0.7
