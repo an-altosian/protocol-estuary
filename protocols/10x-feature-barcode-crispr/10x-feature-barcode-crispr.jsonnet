@@ -347,7 +347,7 @@ local template = {
         external_commands : {
             barcode_translation : utils.barcode_translation(
                 3, 
-                "https://github.com/10XGenomics/cellranger/raw/master/lib/python/cellranger/barcodes/translation/3M-february-2018.txt.gz", 
+                "https://github.com/COMBINE-lab/protocol-estuary/raw/main/resources/translation_3M-february-2018.txt.gz", 
                 $.advanced_config.gene_expression.simpleaf_quant.output + "/af_quant/alevin/quants_mat_rows.txt",
                 $.advanced_config.gene_expression.simpleaf_quant.output
             ),
