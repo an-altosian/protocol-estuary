@@ -689,17 +689,6 @@
                                         local given_kmer_length = $.get(field, "--kmer-length", use_default=true, default=31);
                                         std.toString(std.ceil(std.parseInt(given_kmer_length)/1.8)+1)
                                     ,
-                                    // auto-inject --work-dir for simpleaf index if not provided
-                                    [if program_name == "simpleaf index" && std.objectHas(program_args, "--work-dir") then "--work-dir"]:
-                                        local given_work_dir = $.get(field, "--work-dir", use_default=true);
-                                        if given_work_dir != null then
-                                            given_work_dir
-                                        else
-                                            local given_output = $.get(field, "--output", use_default=true);
-                                            if given_output != null then
-                                                given_output + "/workdir"
-                                            else
-                                                output + "/" + field_name + "/workdir"
                                 })
                             else
                                 field
